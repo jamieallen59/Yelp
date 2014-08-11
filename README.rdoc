@@ -1,0 +1,6 @@
+Yelp with rails
+===============
+
+First foray into rails. Creating the Yelp website.
+
+
