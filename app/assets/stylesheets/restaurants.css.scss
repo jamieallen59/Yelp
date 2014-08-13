@@ -1,3 +1,17 @@
 // Place all the styles related to the restaurants controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+/*----- Restaurant creation errors -------*/
+
+h2 {
+	margin-bottom: 20px;
+}
+#error_explanation {
+	padding: 10px;
+	background-color: #A7DBD8;
+	width: 40%;
+	text-align: center;
+	margin-top: 25px;
+	border: 1px solid #69D2E7;
+}

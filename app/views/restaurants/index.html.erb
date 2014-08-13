@@ -1,11 +1,24 @@
+<h1 class='review-heading'>Reviews</h1>
 
+<section class ='reviews-main-container'>
+	<% if @restaurants.any? %>
+		<% @restaurants.each do |restaurant| %>
+			<section class='individual-review-container'>
+				<h3 class='restaurant-name'><%= restaurant.name %> </h3>
+				<%= link_to "Edit #{restaurant.name}", edit_restaurant_path(restaurant) %>
+				<%= link_to "Delete #{restaurant.name}", restaurant_path(restaurant), method: :delete %>
+				<%= link_to "Leave review", new_restaurant_review_path(restaurant) %>
+					<ul>
+						<% restaurant.reviews.each do |review| %>
+						<li class='review-thoughts'><%= "#{review.thoughts} (#{review.rating})" %></li>
+						<% end %>
+					</ul>
+			</section>
+			<% end %>
+	<% else %>
+		There are no restaurants yet. Please use the button below to add one.
+	<% end %>
+</section>
 
-<% if @restaurants.any? %>
-	<% @restaurants.each do |restaurant| %>
-		<h2><%= restaurant.name %> </h2>
-		<% end %>
-<% else %>
-	No restaurants yet buddy...
-<% end %>
-
-<a href ='#'>Add a restaurant</a>
+<button type='button' id='button-style-1'>
+<%= link_to 'Add restaurant', new_restaurant_path %></button>
