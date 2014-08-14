@@ -19,6 +19,9 @@ gem 'coffee-rails', '~> 4.0.0'
 # gem 'therubyracer',  platforms: :ruby
 
 gem 'rspec-collection_matchers'
+gem 'poltergeist'
+gem 'database_cleaner'
+gem 'devise'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

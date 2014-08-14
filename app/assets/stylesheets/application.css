@@ -15,52 +15,81 @@
  */
 
 body {
-	background-color: #E0E4CC;
+	/*background-color: #E0E4CC;*/
 	font-family: Lucida Grande;
 	display: flex;
 	flex-direction: column;
-	height: 1000px;
 	position: absolute;
-	top: 0; right: 0; bottom: 0; left: 0;
+	top: 0; right: 0; left: 0;
+	height: 1500px;
 }
-
 section.outer-wrapper {
-	display: flex;
-	flex-direction: column;
-	margin: 40px 40px 0 40px;
-}
+		display: flex;
+		flex-direction: column;
+		margin: 140px 40px 0 90px;
+		height: 100%;
+	}
+	nav.navigation-container {
+		position: fixed;
+		display: flex;
+		flex-direction: row;
+		height: 90px;
+		top: 0;
+		left: 0;
+		right: 0;
+		background-color: #FA6900;
+	}
+		a#main-logo {
+			font-family: verdana;
+			font-size: 50px;
+			font-weight: 900;
+			color: #FFFFFF;
+			vertical-align: middle;
+			line-height: 90px;
+			margin-left: 90px;
+		}
+		a#main-logo:hover {
+			color: #69D2E7;
+			/*color: #E0E4CC;*/
+		}
 
-a {
-	text-decoration: none;
-	display: flex;
-}
+	a {
+		text-decoration: none;
+	}
 
-button#button-style-1 {
- font-family: Lucida, Sans-Serif;
- font-size: 19px;
- width: 16%;
- cursor: pointer;
- padding: 6px 11px;
- background-color: #F38630;
- border: none;
- }
-button#button-style-1:hover {
-	background-color: #FA6900;
- }
-button#button-style-1:active {
+	button#button-style-1 {
+	 font-family: Lucida, Sans-Serif;
+	 font-size: 19px;
+	 width: 40%;
+	 margin-top: 8px;
+	 margin-bottom: 4px;
+	 cursor: pointer;
+	 padding: 6px 11px;
+	 background-color: #F38630;
+	 border: none;
+	 }
+	button#button-style-1:hover {
+		/*background-color: #FA6900;*/
+		background-color: #69D2E7;
+	 }
+	button#button-style-1:active {
 
- }
+	 }
+	 a#add-a-restaurant {
+	 	color: #FFFFFF;
+	 	text-align: center;
+	 }
 
-input[type="submit"] {
- font-family: Lucida, Sans-Serif;
- color: #FFF;
- font-size: 19px;
- width: 20%;
- cursor: pointer;
- padding: 6px 0px 6px 0px;
- background-color: #F38630;
- border: none;
- }
- input[type="submit"]:hover {
- 	background-color: #FA6900;
- }
+	input[type="submit"] {
+	 font-family: Lucida, Sans-Serif;
+	 color: #FFF;
+	 font-size: 19px;
+	 width: 20%;
+	 cursor: pointer;
+	 padding: 6px 0px 6px 0px;
+	 background-color: #F38630;
+	 border: none;
+	 }
+	 input[type="submit"]:hover {
+	 	background-color: #FA6900;
+	 }

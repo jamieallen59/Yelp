@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 section.reviews-main-container {
-	background-color: #A7DBD8;
+	background-color: #E0E4CC;
 	display: flex;
 	flex-direction: column;
 	width: 40%;
@@ -11,10 +11,11 @@ section.reviews-main-container {
 
 h1.review-heading {
 	display: flex;
+	font-size: 20px;
 }
-
-h3.restaurant-name {
-	display: flex;
+img.review-icon {
+	height: 50px;
+	width: 45px;
 }
 
 section.individual-review-container {
@@ -22,4 +23,39 @@ section.individual-review-container {
 	margin: 10px;
 	border-radius: 5px;
 	padding: 10px;
+	border: outset;
+	border-width: 4px;
 }
+	h3.restaurant-name {
+		display: flex;
+	}
+	a#edit-restaurant {
+		display: flex;
+	}
+	a#delete-restaurant {
+		display: flex;
+	}
+	a#leave-review {
+		display: flex;
+	}
+	ul.rating-and-review {
+		display: flex;
+		flex-direction: column;
+	}
+		li.average-rating {
+			display: flex;
+		}
+		li.review-thoughts {
+			display: flex;
+			flex-direction: column;
+		}
+			span.endorsement_count {
+				display: flex;
+			}
+			a.endorsement-link {
+				display: flex;
+			}
+
+
+
+

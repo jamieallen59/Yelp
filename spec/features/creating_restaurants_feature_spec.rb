@@ -3,9 +3,13 @@ require 'rails_helper'
 describe 'creating a restaurant' do
 
 	context 'an invalid restaurant' do
+		before do
+			sign_up
+		end
+
 		it 'shows an error due to an uncapitalised name that is too short' do
 			visit '/restaurants'
-			click_link 'Add restaurant'
+			click_link 'Add a restaurant'
 
 			fill_in 'Name', :with => 'Ab'
 			click_button 'Create Restaurant'

@@ -2,7 +2,8 @@ require 'rails_helper'
 
 RSpec.describe Review, :type => :model do
 
-	it 'is valid if given a rating from 1..5 and is assocaited with a restaurant' do
+context 'user input' do
+	it 'is valid if given a rating from 1..5 and is associated with a restaurant' do
 		restaurant = Restaurant.new(name: 'McDonalds')
 		review = Review.new(rating: 4)
 		expect(review).to have(0).error_on(:name)
@@ -19,9 +20,12 @@ RSpec.describe Review, :type => :model do
 		expect(review).to have(1).error_on(:rating)
 	end
 
-	it 'is invalid if not associated with a restaurant' do
-		review = Review.new(rating: 5)
-		expect(review).to have(1).error_on(:rating)
-	end
+	# it 'is invalid if not associated with a restaurant' do
+	# 	restaurant = Restaurant.new(name: 'KFC')
+	# 	restaurant.reviews.create(rating: 4, thoughts: 'Whatever')
+	# 	# review = Review.new(rating: 5)
+	# 	expect(review).to have(1).error_on(:rating)
+	# end
+end
 
 end
