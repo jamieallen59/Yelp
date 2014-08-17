@@ -5,7 +5,6 @@ require File.expand_path("../../config/environment", __FILE__)
 require 'rspec/rails'
 require 'capybara/rails'
 require 'database_cleaner'
-
 require 'capybara/poltergeist'
 Capybara.javascript_driver = :poltergeist
 
@@ -23,6 +22,9 @@ Dir[Rails.root.join("spec/support/**/*.rb")].each { |f| require f }
 ActiveRecord::Migration.maintain_test_schema!
 
 RSpec.configure do |config|
+  config.include Warden::Test::Helpers
+  Warden.test_mode!
+
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixturesgem
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
 
@@ -49,6 +51,7 @@ RSpec.configure do |config|
 
   config.after(:each) do
     DatabaseCleaner.clean
+    Warden.test_reset!
   end
 
   # RSpec Rails can automatically mix in different behaviours to your tests

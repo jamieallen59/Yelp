@@ -11,14 +11,32 @@
 <body>
 
 	<nav class='navigation-container'>
-		<a href='/restaurants' id='main-logo'>RATE</a>
-	</nav>
-	<section class="outer-wrapper">
-		<%= notice %>
-		<%= yield %>
+		<a href='/restaurants' id='main-logo'><img src='http://www.clker.com/cliparts/P/7/r/8/X/p/icon-nutrition-hi.png' id='logo'/>RATE</a>
 
-		<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-	</section>
+		<div id='javascript-notice'>
+			<%= notice %>
+		</div>
+		
+		<div class='login-buttons'>
+			<% if user_signed_in? %>
+			<section id='login-message'>
+				Logged in as <%= current_user.email %>
+			</section>
+					<%= link_to 'Sign out', destroy_user_session_path, method: :delete, id: 'sign-out' %>
+		<% else %>
+				<%= link_to 'Sign up', new_user_registration_path, id: 'sign-up' %>
+				<%= link_to 'Log in', new_user_session_path, id: 'log-in' %>
+			<a href="#middle">Middle</a>
+			</div>
+		<% end %>
+		</nav>
+
+		<section class="outer-wrapper">
+			<div id="middle"></div>
+			<%= yield %>
+
+			<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+		</section>
 
 </body>
 </html>

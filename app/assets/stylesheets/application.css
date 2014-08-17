@@ -16,7 +16,7 @@
 
 body {
 	/*background-color: #E0E4CC;*/
-	font-family: Lucida Grande;
+	font-family: "Helvetica Neue", Lucida Grande;
 	display: flex;
 	flex-direction: column;
 	position: absolute;
@@ -26,32 +26,78 @@ body {
 section.outer-wrapper {
 		display: flex;
 		flex-direction: column;
-		margin: 140px 40px 0 90px;
+		margin: 20px 20px 0 60px;
 		height: 100%;
 	}
 	nav.navigation-container {
-		position: fixed;
+		background-image: url('http://www.lenordik.com/app/assets/media/generated/55afa22ff1c80bb4097cb1349324a8fc1320719438_gallery_gallery.jpg?1335469974');
+		background-size: 100%;
+		background-repeat: no-repeat;
+		-webkit-font-smoothing: antialiased;
+		height: 70%;
 		display: flex;
 		flex-direction: row;
-		height: 90px;
 		top: 0;
 		left: 0;
-		right: 0;
-		background-color: #FA6900;
+		right: 0;		
 	}
 		a#main-logo {
 			font-family: verdana;
-			font-size: 50px;
-			font-weight: 900;
+			font-size: 35px;
 			color: #FFFFFF;
-			vertical-align: middle;
-			line-height: 90px;
-			margin-left: 90px;
+			margin-left: 20px;
+			margin-top: 12px;
+			height: 54px;
+			width: 200px;
 		}
 		a#main-logo:hover {
-			color: #69D2E7;
-			/*color: #E0E4CC;*/
+			color: #1693A5;
+		
 		}
+		#logo {
+			height: 58px;
+			margin-bottom: -16px;
+			margin-right: 2px;
+		}
+		#javascript-notice {
+			color: #FFF;
+			width: 25%;
+			margin-top: 38px;
+			height: 20px;
+			font-weight: 200;
+		}
+		.login-buttons {
+			display: flex;
+			flex-direction: row;
+			justify-content: flex-end;
+			height: 54px;
+			width: 44%;
+			margin-right: 8%;
+			margin-top: 32px;
+		}
+			a#sign-up {
+				color: #FFF;
+				font-weight: 200;
+				margin-right: 3%;
+				height: 20px;
+			}
+			a#log-in {
+				color: #FFF;
+				font-weight: 200;
+				height: 20px;
+			}
+			a#sign-out {
+				color: #FFF;
+				font-weight: 200;
+				margin-right: 3%;
+				height: 20px;
+			}
+			section#login-message {
+				color: #FFF;
+				font-weight: 200;
+				margin-right: 5%;
+				height: 20px;
+			}
 
 	a {
 		text-decoration: none;
@@ -69,7 +115,7 @@ section.outer-wrapper {
 	 border: none;
 	 }
 	button#button-style-1:hover {
-		/*background-color: #FA6900;*/
+		/*background-color: #FA6900;
 		background-color: #69D2E7;
 	 }
 	button#button-style-1:active {

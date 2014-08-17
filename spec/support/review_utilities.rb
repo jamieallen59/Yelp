@@ -1,8 +1,8 @@
 
-	def leave_review(rating, thoughts)
+	def leave_review(thoughts, rating)
 		visit '/restaurants'
-		click_link('Leave review')
+		click_link('Review KFC')
 		fill_in('Thoughts', with: thoughts)
-		select rating, from: 'Rating'
+		select rating.to_s, from: 'Rating'
 		click_button 'Leave review'
 	end
